@@ -1,0 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+#menuVertical{
+    width: 8%;
+    height: 100vh;
+    border: 0 5px 0 0 solid salmon;
+   
+}
