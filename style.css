@@ -4,17 +4,87 @@
     box-sizing: border-box;
 }
 
+:root{
+    --rosaClaro: rgb(255, 180, 191);
+    --rosa: rgb(249, 147, 163)
+}
+
 .container{
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: row;
+    background-color: var(--rosaClaro);
  
 }
 
 #menuVertical{
-    width: 8%;
-    height: 100vh;
-    border: 0 5px 0 0 solid salmon;
-   
+    width: 10%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+}
+
+hr{
+    border-color: var(--rosa);
+    border-width: 2px;
+    size: 90%;
+    /* height: 90%; */
+}
+
+#separacao{
+    height: 90%;
+    align-self: center;
+}
+
+#cronometro{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blueviolet; */
+}
+
+#botoes{
+    width: 20%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: cadetblue; */
+}
+/* #tempo{
+    background-color: aquamarine;
+    width: 20%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+#timer{
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#comeca, #reinicia, #registrar{
+    width: 32%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+#listaRegistrados{
+    background-color: cadetblue;
 }

@@ -13,10 +13,7 @@ const formataTempo = (time) =>{
     const segundos = Math.floor ((time % 6000) / 100);
     const centesimos = time % 100;
 
-    return `${horas.toString().padStart(2,"0")}:
-    ${minutos.toString().padStart(2,"0")}:
-    ${segundos.toString().padStart(2,"0")}:
-    ${centesimos.toString().padStart(2,"0")}:`;
+    return `${horas.toString().padStart(2,"0")}:${minutos.toString().padStart(2,"0")}:${segundos.toString().padStart(2,"0")}:${centesimos.toString().padStart(2,"0")}`;
 }
 
 const adicionaMarcacao = (markIndex, marcaTempo) =>{
@@ -48,9 +45,11 @@ const alteraStart = () =>{
             setTime(timer)
         }, 10);
         botaoAltera.setAttribute("action", "pause")
+        botaoAltera.innerHTML = '<i class="fa-solid fa-pause"></i>';
         //muda o icone aq
     } else if (acao == "pause")
         botaoAltera.setAttribute("action", "continue")
+        botaoAltera.innerHTML = '<i class="fa-solid fa-play"></i>';
         //muda o icone aq
 }
 
