@@ -2,11 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
 }
 
 :root{
-    --rosaClaro: rgb(255, 180, 191);
-    --rosa: rgb(249, 147, 163)
+    --rosaClaro: #FFDDDE;
+    --rosa: #EEA3A3;
+    --rosaEscuro: #F68286;
+    --branco: #ffffff;
 }
 
 .container{
@@ -20,12 +23,24 @@
 
 #menuVertical{
     width: 10%;
-    height: 60%;
-    display: flex;
+    /* height: 60%; */
+     display: flex; 
     flex-direction: column;
     justify-content: space-between;
-    align-self: center;
+    align-self: center; 
 }
+
+.divMenu{
+    width: 100%;
+   
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 hr{
     border-color: var(--rosa);
@@ -39,10 +54,10 @@ hr{
     align-self: center;
 }
 
-#cronometro{
+.cronometro{
     width: 90%;
     height: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -56,6 +71,7 @@ hr{
     justify-content: space-between;
     /* background-color: cadetblue; */
 }
+
 /* #tempo{
     background-color: aquamarine;
     width: 20%;
@@ -70,7 +86,7 @@ hr{
     height: 250px;
     width: 250px;
     border-radius: 100%;
-    border: 2px solid black;
+    border: 3px solid var(--rosa);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,5 +102,46 @@ hr{
 }
 
 #listaRegistrados{
-    background-color: cadetblue;
+    width: 20%;
+    background-color: var(--rosa);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+}
+
+#titleMark{
+    align-self: center;
+    padding: 10px 0;
+}
+
+#marks{
+    padding: 0 0 5px 10px;
+}
+
+span{
+    color: var(--branco);
+}
+
+#tomate255, #tomate5010{
+    width: 40%;
+}
+
+#conometroIcon, #temporizadorIcon{
+    width: 25%;
+}
+
+#playIcon, #reiniciaIcon, #flagIcon{
+    width: 20%;
+}
+
+.pomodoro25-5{
+    display: none;
+}
+
+.pomodoro50-10{
+    display: none;
+}
+
+.temporizadorLivre{
+    display: none;
 }

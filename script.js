@@ -1,5 +1,14 @@
-const tempo = document.getElementById("timer")
-const listaRegistro = document.getElementById("listaRegistrados")
+const pomodoro255 = document.getElementsByClassName("pomodoro25-5");
+const pomodoro5010 = document.getElementsByClassName("pomodoro50-10");
+const cronometro = document.getElementsByClassName("cronometro");
+const tempLivre = document.getElementsByClassName("temporizadorLivre");
+const tomateIcon255 = document.getElementById("tomate255");
+const tomateIcon5010 = document.getElementById("tomate5010");
+const cronometroIcon = document.getElementById("conometroIcon");
+const temporizadorIcon = document.getElementById("temporizadorIcon");
+
+const tempo = document.getElementById("timer");
+const listaRegistro = document.getElementById("listaRegistrados");
 const botaoAltera = document.getElementById("comeca");
 const botaoRegistra = document.getElementById("registrar");
 const botaoApaga = document.getElementById("reinicia")
@@ -7,7 +16,8 @@ let intervalID = 0;
 let timer = 0; //armazena o tempo em centesimos de segundos
 let marks = [];
 
-const formataTempo = (time) =>{
+
+function formataTempo(time){
     const horas = Math.floor (time / 360000);
     const minutos = Math.floor ((time % 360000) / 6000);
     const segundos = Math.floor ((time % 6000) / 100);
@@ -16,16 +26,18 @@ const formataTempo = (time) =>{
     return `${horas.toString().padStart(2,"0")}:${minutos.toString().padStart(2,"0")}:${segundos.toString().padStart(2,"0")}:${centesimos.toString().padStart(2,"0")}`;
 }
 
-const adicionaMarcacao = (markIndex, marcaTempo) =>{
-    listaRegistro.innerHTML += `<p>Marca ${markIndex}: ${formataTempo(marcaTempo)}</p>`
+function adicionaMarcacao(markIndex, marcaTempo){
+    listaRegistro.style.display = "flex"
+    listaRegistro.innerHTML += `<p id="marks">Marca ${markIndex}: ${formataTempo(marcaTempo)}</p>`
 }
 
-const marcaTempo = () =>{
+
+function marcaTempo(){
     marks.push(timer)
     adicionaMarcacao(marks.length,timer)
 }
 
-const resetaTempo = () =>{
+function resetaTempo(){
     clearInterval(intervalID)
     timer = 0
     marks = []
@@ -34,7 +46,7 @@ const resetaTempo = () =>{
     botaoAltera.setAttribute("action", "start")
 }
 
-const alteraStart = () =>{
+function alteraStart(){
     const acao = botaoAltera.getAttribute('action');
 
     clearInterval(intervalID);
@@ -45,18 +57,51 @@ const alteraStart = () =>{
             setTime(timer)
         }, 10);
         botaoAltera.setAttribute("action", "pause")
-        botaoAltera.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        botaoAltera.innerHTML.src = "./imagens/pause-bold.png";
         //muda o icone aq
     } else if (acao == "pause")
         botaoAltera.setAttribute("action", "continue")
-        botaoAltera.innerHTML = '<i class="fa-solid fa-play"></i>';
+        botaoAltera.innerHTML.src = "./imagens/play-bold.png";
         //muda o icone aq
 }
 
-const setTime = (time) =>{
+function setTime(time){
     tempo.innerText = formataTempo(time)
 }
+
+function trocaFuncaoPomodoro255(){
+    pomodoro255.style.display = "flex";
+    pomodoro5010.style.display = "none";
+    cronometro.style.display = "none";
+    tempLivre.style.display = "none";
+}
+
+function trocaFuncaoPomodoro5010(){
+    pomodoro255.style.display = "none";
+    pomodoro5010.style.display = "flex";
+    cronometro.style.display = "none";
+    tempLivre.style.display = "none";
+}
+
+function trocaFuncaoCronometro(){
+   
+    cronometro.style.display = "flex";
+
+}
+
+function trocaFuncaoTemporizador(){
+    pomodoro255.style.display = "none";
+    pomodoro5010.style.display = "none";
+    cronometro.style.display = "none";
+    tempLivre.style.display = "flex";
+}
+
 
 botaoAltera.addEventListener("click", alteraStart);
 botaoRegistra.addEventListener("click", marcaTempo);
 botaoApaga.addEventListener("click", resetaTempo);
+
+tomateIcon255.addEventListener("click", trocaFuncaoPomodoro255);
+tomateIcon5010.addEventListener("click", trocaFuncaoPomodoro5010);
+cronometroIcon.addEventListener("click", trocaFuncaoCronometro);
+temporizadorIcon.addEventListener("click", trocaFuncaoTemporizador);

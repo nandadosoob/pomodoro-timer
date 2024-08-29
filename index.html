@@ -4,28 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://unpkg.com/@phosphor-icons/web"></script> -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+   
     <title>Document</title>
 </head>
 <body>
     <div class="container">
         <div id="menuVertical">
-            <i class="fa-regular fa-tomato"></i>
-            <span>25x5</span>
-            <hr>
-            <i class="fa-solid fa-tomato"></i>
-            <span>50x10</span>
-            <hr>
-            <i class="fa-regular fa-alarm-clock"></i>
-            <span>cronometro</span>
-            <hr>
-            <span>personalize</span>
+            <!-- <i class="ph-bold ph-palette"></i> -->
+            <div class="divMenu">
+                <img src="./imagens/Captura_de_tela_2024-08-29_140045-removebg-preview.png" id="tomate255">
+                <span>25x5</span>
+            </div>
+            
+            <div class="divMenu">
+                <img src="./imagens/Captura_de_tela_2024-08-29_140045-removebg-preview.png" id="tomate5010">
+                <span>50x10</span>
+            </div>
+            
+            <div class="divMenu">
+                <img src="./imagens/clock-countdown-bold.png" id="conometroIcon">
+                <span>cronometro</span>
+            </div>
+            
+            <div class="divMenu">
+                <img src="./imagens/timer-bold.png" id="temporizadorIcon">
+                <span>Temporizador livre</span>
+            </div>
 
         </div>
         <hr id="separacao">
-        <div id="cronometro">
+        <div class="cronometro">
 
             <div>
                 <h2 id="timer">
@@ -36,15 +49,30 @@
             <br>
             <div id="botoes">
 
-                <button id="comeca" action="start"><i class="fa-solid fa-play"></i></button>
-                <button id="reinicia"> <i class="fa-solid fa-redo"></i> </button>
-                <button id="registrar"> <i class="fa-solid fa-flag"></i> </button>
+                <button id="comeca" action="start"><img src="./imagens/play-bold.png" id="playIcon"></button>
+                <!-- <i class="ph ph-pause"></i> -->
+                 <!-- <img src="./imagens/pause-bold.png"> -->
+                <button id="reinicia"><img src="./imagens/arrow-clockwise-bold.png" id="reiniciaIcon"> </button>
+                <button id="registrar"> <img src="./imagens/flag-bold.png" id="flagIcon"> </button>
             </div>
             <br>
             <div id="listaRegistrados">
-                <p></p>
+                <p id="titleMark">Mark list!</p>
             </div>
         </div>
+
+        <div class="pomodoro25-5">
+            <p>
+                oi
+            </p>
+        </div>
+        <div class="pomodoro50-10">
+            <p>agr vai ne</p>
+        </div>
+        <div class="temporizadorLivre">
+            <p>neeee</p>
+        </div>
+
     </div>
 </body>
 </html>
