@@ -11,7 +11,16 @@ const tempo = document.getElementById("timer");
 const listaRegistro = document.getElementById("listaRegistrados");
 const botaoAltera = document.getElementById("comeca");
 const botaoRegistra = document.getElementById("registrar");
-const botaoApaga = document.getElementById("reinicia")
+const botaoApaga = document.getElementById("reinicia");
+
+const botaoIniciaPomo = document.getElementById("comecaPomo")
+const botaoOpcoesPomo = document.getElementById("pauseOp")
+const botaoProximo = document.getElementById("proximo")
+const tempoPomodoro = document.getElementById("timerPomo")
+let isPaused = false; 
+let enteredTime = null; 
+
+let timerPomo;
 let intervalID = 0;
 let timer = 0; //armazena o tempo em centesimos de segundos
 let marks = [];
@@ -101,7 +110,51 @@ botaoAltera.addEventListener("click", alteraStart);
 botaoRegistra.addEventListener("click", marcaTempo);
 botaoApaga.addEventListener("click", resetaTempo);
 
-tomateIcon255.addEventListener("click", trocaFuncaoPomodoro255);
-tomateIcon5010.addEventListener("click", trocaFuncaoPomodoro5010);
-cronometroIcon.addEventListener("click", trocaFuncaoCronometro);
-temporizadorIcon.addEventListener("click", trocaFuncaoTemporizador);
+// tomateIcon255.addEventListener("click", trocaFuncaoPomodoro255);
+// tomateIcon5010.addEventListener("click", trocaFuncaoPomodoro5010);
+// cronometroIcon.addEventListener("click", trocaFuncaoCronometro);
+// temporizadorIcon.addEventListener("click", trocaFuncaoTemporizador);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////// POMODORO 25/5
+
+
+function startTimer() { 
+    timerPomo = setInterval(updateTimer, 1000); 
+} 
+
+function atualizaTempo(){
+    tempoPomodoro.textContent = formataTempo(minutos, segundos);
+    if (minutos === 0 && segundos === 0){
+        clearInterval(timerPomo)
+        alert('Time is up! Take a break.');
+
+    }else if (!isPaused) { 
+        if (segundos > 0) { 
+            segundos--; 
+        } else { 
+            segundos = 59; 
+            minutos--; 
+        } 
+    } 
+}
+
+function alteraPausaDespausa(){
+
+}
+
+function comecaPomodoro(){
+    clearInterval(timerPomo); 
+    minutos = enteredTime || 15; 
+    segundos = 0; 
+    isPaused = false; 
+    tempoPomodoro.textContent = formatTime(minutos, segundos); 
+    // const pauseResumeButton = 
+    //     document.querySelector('.control-buttons button'); 
+    // pauseResumeButton.textContent = 'Pause'; 
+    startTimer(); 
+}
+
+botaoIniciaPomo.addEventListener("click", )
+botaoOpcoesPomo.addEventListener("click", )
+botaoProximo.addEventListener("click", )

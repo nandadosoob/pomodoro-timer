@@ -130,12 +130,37 @@ span{
     width: 25%;
 }
 
-#playIcon, #reiniciaIcon, #flagIcon{
+#playIcon, #reiniciaIcon, #flagIcon, #nextIcon, #opIcon{
     width: 20%;
 }
 
 .pomodoro25-5{
-    display: none;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tomatin{
+    width: 90%;
+    padding: 0 0 10px 0;
+}
+
+#botoes-pomodoro{
+    width: 20%;
+    height: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#comecaPomo, #pauseOp, #proximo{
+    width: 32%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+
 }
 
 .pomodoro50-10{
