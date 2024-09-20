@@ -170,3 +170,28 @@ span{
 .temporizadorLivre{
     display: none;
 }
+
+
+#caboTomate{
+    background-color:pink;
+    width:8px;
+    height:20px;
+    margin:0 0 -3px 0;
+    border-radius:5px 5px 0 0;
+    transform:rotate(15deg);
+    -ms-transform:rotate(15deg); /* IE 9 */
+    -moz-transform:rotate(15deg); /* Firefox */
+    -webkit-transform:rotate(15deg); /* Safari and Chrome */
+    -o-transform:rotate(15deg); /* Opera */
+ 
+}
+
+#corpoTomate{
+    width:120px;
+    height:100px;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    background-color:pink;
+    border-radius:80px 80px 140px 140px;
+}
