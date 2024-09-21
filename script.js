@@ -13,14 +13,9 @@ const botaoAltera = document.getElementById("comeca");
 const botaoRegistra = document.getElementById("registrar");
 const botaoApaga = document.getElementById("reinicia");
 
-const botaoIniciaPomo = document.getElementById("comecaPomo")
-const botaoOpcoesPomo = document.getElementById("pauseOp")
-const botaoProximo = document.getElementById("proximo")
-const tempoPomodoro = document.getElementById("timerPomo")
-let isPaused = false; 
-let enteredTime = null; 
 
-let timerPomo;
+
+
 let intervalID = 0;
 let timer = 0; //armazena o tempo em centesimos de segundos
 let marks = [];
@@ -118,43 +113,48 @@ botaoApaga.addEventListener("click", resetaTempo);
 
 /////////////////////////////////////////////////////////////////////////////////////////////// POMODORO 25/5
 
+// pomo em seg: 1500
+// pausa curta em seg: 300
+//pausa longa em seg: 900
 
-function startTimer() { 
-    timerPomo = setInterval(updateTimer, 1000); 
-} 
+const botaoIniciaPomo = document.getElementById("comecaPomo")
+const botaoOpcoesPomo = document.getElementById("pauseOp")
+const botaoProximo = document.getElementById("proximo")
+const tempoPomodoro = document.getElementById("timerPomo")
+let isRunning = false;
+let timerPomo;
+let currentTime = workTime;
 
 function atualizaTempo(){
-    tempoPomodoro.textContent = formataTempo(minutos, segundos);
-    if (minutos === 0 && segundos === 0){
-        clearInterval(timerPomo)
-        alert('Time is up! Take a break.');
-
-    }else if (!isPaused) { 
-        if (segundos > 0) { 
-            segundos--; 
-        } else { 
-            segundos = 59; 
-            minutos--; 
-        } 
-    } 
+    if (currentTime > 0) {
+        currentTime--;
+    } else {
+        clearInterval(timerPomo);
+        alert("O tempo acabou!");
+        isRunning = false;
+        botaoIniciaPomo.textContent = "Iniciar";
+    }
 }
 
-function alteraPausaDespausa(){
-
+function startTimer() {
+    if (!isRunning) {
+        timerPomo = setInterval(updateTimer, 1000);
+        botaoIniciaPomo.textContent = "Pausar";
+        isRunning = true;
+    } else {
+        clearInterval(timerPomo);
+        botaoIniciaPomo.textContent = "Iniciar";
+        isRunning = false;
+    }
 }
 
-function comecaPomodoro(){
-    clearInterval(timerPomo); 
-    minutos = enteredTime || 15; 
-    segundos = 0; 
-    isPaused = false; 
-    tempoPomodoro.textContent = formatTime(minutos, segundos); 
-    // const pauseResumeButton = 
-    //     document.querySelector('.control-buttons button'); 
-    // pauseResumeButton.textContent = 'Pause'; 
-    startTimer(); 
+function resetTimer() {
+    clearInterval(timerPomo);
+    currentTime = workTime;
+    updateTimer();
+    botaoIniciaPomo.textContent = "Iniciar";
+    isRunning = false;
 }
 
-botaoIniciaPomo.addEventListener("click", )
-botaoOpcoesPomo.addEventListener("click", )
-botaoProximo.addEventListener("click", )
+botaoIniciaPomo.addEventListener('click', startTimer);
+// resetButton.addEventListener('click', resetTimer);

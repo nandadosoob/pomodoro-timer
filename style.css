@@ -141,6 +141,7 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* background-color: beige; */
 }
 
 #tomatin{
@@ -174,8 +175,8 @@ span{
 
 #caboTomate{
     background-color:pink;
-    width:8px;
-    height:20px;
+    width: 15px;
+    height: 30px;
     margin:0 0 -3px 0;
     border-radius:5px 5px 0 0;
     transform:rotate(15deg);
@@ -187,11 +188,14 @@ span{
 }
 
 #corpoTomate{
-    width:120px;
-    height:100px;
+    width: 350px;
+    height: 300px;
     display:flex;
-    flex-direction:row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     background-color:pink;
-    border-radius:80px 80px 140px 140px;
+    border-radius:180% 180% 200% 200%;
+    margin-bottom: 2%;
+  
 }
