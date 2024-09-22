@@ -9,30 +9,30 @@
     <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-        rel="stylesheet">
-    <title>Pomodoro 50 X 10</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>Cronômetro</title>
 </head>
 
 <body>
     <div class="container">
 
         <div id="menuVertical">
-            <a href="../pomodoro255/index.html">
-                <div class="divMenu">
-                    <img src="../imagens/Captura_de_tela_2024-08-29_140045-removebg-preview.png" id="tomate255">
-                    <span>25x5</span>
-                </div>
-            </a>
+            <!-- <i class="ph-bold ph-palette"></i> -->
+             <a href="../pomodoro255/index.html">
+                 <div class="divMenu">
+                     <img src="../imagens/Captura_de_tela_2024-08-29_140045-removebg-preview.png" id="tomate255">
+                     <span>25x5</span>
+                 </div>
+             </a>
 
-            <a href="index.html">
+            <a href="../pomodoro5010/index.html">
                 <div class="divMenu">
                     <img src="../imagens/Captura_de_tela_2024-08-29_140045-removebg-preview.png" id="tomate5010">
                     <span>50x10</span>
                 </div>
             </a>
 
-            <a href="../cronometro/index.html">
+            <a href="index.html">
                 <div class="divMenu">
                     <img src="../imagens/clock-countdown-bold.png" id="conometroIcon">
                     <span>cronometro</span>
@@ -50,26 +50,27 @@
 
         <hr id="separacao">
 
-        <div class="pomodoro50-10">
-            <div id="formaTomate">
-                <div id="caboTomate"></div>
-                <div id="corpoTomate">
-                    <h6> time 1 </h6>
-                    <h2 id="timerPomo">
-                        50:00
-                    </h2>
-                </div>
-            </div>
+        <div class="cronometro">
+            <div>
+                <h2 id="timer">
+                    00:00:00:00
+                </h2>
 
-            <div id="botoes-pomodoro">
-                <button id="pauseOp"><img src="../imagens/option-bold.png" id="opIcon"> </button>
-                <button id="comecaPomo" action="start"><img src="../imagens/play-bold.png" id="playIcon"></button>
+            </div>
+            <br>
+            <div id="botoes">
+
+                <button id="comeca" action="start"><img src="../imagens/play-bold.png" id="playIcon"></button>
                 <!-- <i class="ph ph-pause"></i> -->
                 <!-- <img src="./imagens/pause-bold.png"> -->
-                <button id="proximo"> <img src="../imagens/skip-forward-bold.png" id="nextIcon"> </button>
+                <button id="reinicia"><img src="../imagens/arrow-clockwise-bold.png" id="reiniciaIcon"> </button>
+                <button id="registrar"> <img src="../imagens/flag-bold.png" id="flagIcon"> </button>
+            </div>
+            <br>
+            <div id="listaRegistrados">
+                <p id="titleMark">Mark list!</p>
             </div>
         </div>
-    </div>
     </div>
 </body>
 

@@ -32,7 +32,6 @@
 
 .divMenu{
     width: 100%;
-   
     height: 130px;
     display: flex;
     flex-direction: column;
@@ -42,6 +41,7 @@
 
 a{
     text-decoration: none;
+    color: var(--branco);
 }
 
 hr{
@@ -56,73 +56,7 @@ hr{
     align-self: center;
 }
 
-.cronometro{
-    width: 90%;
-    height: 100%;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background-color: blueviolet; */
-}
 
-#botoes{
-    width: 20%;
-    height: 5%;
-    display: flex;
-    justify-content: space-between;
-    /* background-color: cadetblue; */
-}
-
-/* #tempo{
-    background-color: aquamarine;
-    width: 20%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
-#timer{
-    height: 250px;
-    width: 250px;
-    border-radius: 100%;
-    border: 3px solid var(--rosa);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-#comeca, #reinicia, #registrar{
-    width: 32%;
-    height: 100%;
-    border: none;
-    border-radius: 8px;
-}
-
-#listaRegistrados{
-    width: 20%;
-    background-color: var(--rosa);
-    border-radius: 10px;
-    display: none;
-    flex-direction: column;
-}
-
-#titleMark{
-    align-self: center;
-    padding: 10px 0;
-}
-
-#marks{
-    padding: 0 0 5px 10px;
-}
-
-span{
-    color: var(--branco);
-}
 
 #tomate255, #tomate5010{
     width: 40%;
@@ -143,7 +77,6 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: beige; */
 }
 
 #tomatin{
@@ -166,14 +99,11 @@ span{
 
 }
 
-.pomodoro50-10{
-    display: none;
+#formaTomate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.temporizadorLivre{
-    display: none;
-}
-
 
 #caboTomate{
     background-color:pink;
@@ -182,6 +112,7 @@ span{
     margin:0 0 -3px 0;
     border-radius:5px 5px 0 0;
     transform:rotate(15deg);
+   
     -ms-transform:rotate(15deg); /* IE 9 */
     -moz-transform:rotate(15deg); /* Firefox */
     -webkit-transform:rotate(15deg); /* Safari and Chrome */

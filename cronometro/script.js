@@ -1,20 +1,9 @@
-const pomodoro255 = document.getElementsByClassName("pomodoro25-5");
-const pomodoro5010 = document.getElementsByClassName("pomodoro50-10");
-const cronometro = document.getElementsByClassName("cronometro");
-const tempLivre = document.getElementsByClassName("temporizadorLivre");
-const tomateIcon255 = document.getElementById("tomate255");
-const tomateIcon5010 = document.getElementById("tomate5010");
-const cronometroIcon = document.getElementById("conometroIcon");
-const temporizadorIcon = document.getElementById("temporizadorIcon");
 
 const tempo = document.getElementById("timer");
 const listaRegistro = document.getElementById("listaRegistrados");
 const botaoAltera = document.getElementById("comeca");
 const botaoRegistra = document.getElementById("registrar");
 const botaoApaga = document.getElementById("reinicia");
-
-
-
 
 let intervalID = 0;
 let timer = 0; //armazena o tempo em centesimos de segundos
@@ -104,9 +93,3 @@ function trocaFuncaoTemporizador(){
 botaoAltera.addEventListener("click", alteraStart);
 botaoRegistra.addEventListener("click", marcaTempo);
 botaoApaga.addEventListener("click", resetaTempo);
-
-// tomateIcon255.addEventListener("click", trocaFuncaoPomodoro255);
-// tomateIcon5010.addEventListener("click", trocaFuncaoPomodoro5010);
-// cronometroIcon.addEventListener("click", trocaFuncaoCronometro);
-// temporizadorIcon.addEventListener("click", trocaFuncaoTemporizador);
-

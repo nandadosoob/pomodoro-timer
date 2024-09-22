@@ -42,6 +42,7 @@
 
 a{
     text-decoration: none;
+    color: var(--branco);
 }
 
 hr{
@@ -59,7 +60,7 @@ hr{
 .cronometro{
     width: 90%;
     height: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -136,68 +137,3 @@ span{
     width: 20%;
 }
 
-.pomodoro25-5{
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* background-color: beige; */
-}
-
-#tomatin{
-    width: 90%;
-    padding: 0 0 10px 0;
-}
-
-#botoes-pomodoro{
-    width: 20%;
-    height: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-
-#comecaPomo, #pauseOp, #proximo{
-    width: 32%;
-    height: 100%;
-    border: none;
-    border-radius: 8px;
-
-}
-
-.pomodoro50-10{
-    display: none;
-}
-
-.temporizadorLivre{
-    display: none;
-}
-
-
-#caboTomate{
-    background-color:pink;
-    width: 15px;
-    height: 30px;
-    margin:0 0 -3px 0;
-    border-radius:5px 5px 0 0;
-    transform:rotate(15deg);
-    -ms-transform:rotate(15deg); /* IE 9 */
-    -moz-transform:rotate(15deg); /* Firefox */
-    -webkit-transform:rotate(15deg); /* Safari and Chrome */
-    -o-transform:rotate(15deg); /* Opera */
- 
-}
-
-#corpoTomate{
-    width: 350px;
-    height: 300px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color:pink;
-    border-radius:180% 180% 200% 200%;
-    margin-bottom: 2%;
-  
-}

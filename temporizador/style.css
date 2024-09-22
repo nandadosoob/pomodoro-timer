@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+:root{
+    --rosaClaro: #FFDDDE;
+    --rosa: #EEA3A3;
+    --rosaEscuro: #F68286;
+    --branco: #ffffff;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--rosaClaro);
+
+}
+
+#menuVertical{
+    width: 10%;
+    /* height: 60%; */
+     display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center; 
+}
+
+.divMenu{
+    width: 100%;
+
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: var(--branco);
+}
+
+hr{
+    border-color: var(--rosa);
+    border-width: 2px;
+    size: 90%;
+    /* height: 90%; */
+}
+
+#separacao{
+    height: 90%;
+    align-self: center;
+}
+
+
+
+#tomate255, #tomate5010{
+    width: 40%;
+}
+
+#conometroIcon, #temporizadorIcon{
+    width: 25%;
+}
+
