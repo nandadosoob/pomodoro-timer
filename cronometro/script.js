@@ -62,33 +62,6 @@ function setTime(time){
     tempo.innerText = formataTempo(time)
 }
 
-function trocaFuncaoPomodoro255(){
-    pomodoro255.style.display = "flex";
-    pomodoro5010.style.display = "none";
-    cronometro.style.display = "none";
-    tempLivre.style.display = "none";
-}
-
-function trocaFuncaoPomodoro5010(){
-    pomodoro255.style.display = "none";
-    pomodoro5010.style.display = "flex";
-    cronometro.style.display = "none";
-    tempLivre.style.display = "none";
-}
-
-function trocaFuncaoCronometro(){
-   
-    cronometro.style.display = "flex";
-
-}
-
-function trocaFuncaoTemporizador(){
-    pomodoro255.style.display = "none";
-    pomodoro5010.style.display = "none";
-    cronometro.style.display = "none";
-    tempLivre.style.display = "flex";
-}
-
 
 botaoAltera.addEventListener("click", alteraStart);
 botaoRegistra.addEventListener("click", marcaTempo);
